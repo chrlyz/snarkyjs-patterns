@@ -4,11 +4,8 @@
 to replicate errors, save and share potentially useful code,
 or even just document why some things don't work, etc.
 
-To try a pattern just copy the files from a directory
-located under `./patterns`, into `./src` (If the directory name ends with `failure`
-is because the pattern throws an error when executed. If it ends with `success`
-it doesn't throw an error, but doesn't necessarily means it is correct.
-Look for comments explaining why.), then:
+To test a pattern just copy the files from a directory
+located under `./patterns`, into `./src` then:
 
 ## Install npm modules:
 
@@ -25,4 +22,9 @@ npm run build
 
 ```sh
 node ./build/src/interact.js
+```
+## Or if the pattern directory has a `*.test.ts` file, run the pattern tests with:
+
+```sh
+npm run test
 ```
