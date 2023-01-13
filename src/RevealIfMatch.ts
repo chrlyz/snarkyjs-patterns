@@ -48,10 +48,11 @@ export class RevealIfMatch extends SmartContract {
       fromActionHash: currentActionHash,
     });
 
-    /* Surprisingly the reduce method returns the value for when
-     * isCorrectGuess is true, instead of just the last returned
-     * value from Circuit.if (since it should overwrite the value
-     * of the accumulator in each iteration).
+    /* The reduce method returns the value of the action for when
+     * isCorrectGuess is true, since when this happens, the value of the
+     * action that equals to secretNumber is assigned to state, so every
+     * following evaluation that makes isCorrectGuess equal to false,
+     * will return state, which already assumed the value of secretNumber.
      */
 
     let { state: finalState, actionsHash } = this.reducer.reduce(

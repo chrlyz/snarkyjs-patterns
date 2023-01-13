@@ -50,7 +50,7 @@ describe('RevealIfMatch', () => {
     await txn.send();
   }
 
-  test(`that revealedSecretNumber is set to secretNumber after one of 3 emitted actions
+  test(`revealedSecretNumber is set to secretNumber after one of 3 emitted actions
         contains a value equal to secretNumber `, async () => {
     await localDeploy();
 
