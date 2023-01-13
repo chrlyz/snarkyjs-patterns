@@ -80,6 +80,6 @@ describe('RevealIfMatch', () => {
     await txn4.prove();
     await txn4.send();
 
-    expect(zkApp.revealedSecretNumber.get()).toEqual(zkApp.secretNumber.get());
+    expect(zkApp.revealedSecretNumber.get()).toEqual(Field(2));
   });
 });
