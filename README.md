@@ -26,5 +26,5 @@ node ./build/src/interact.js
 ## Or if the pattern directory has a `*.test.ts` file, run the pattern tests with:
 
 ```sh
-npm run test
+npm run test -- <name of the .test.ts file>
 ```
