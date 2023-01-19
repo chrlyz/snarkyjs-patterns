@@ -10,7 +10,7 @@ import {
 
 import { RevealIfMatch } from './RevealIfMatch.js';
 
-let proofsEnabled = false;
+let proofsEnabled = true;
 
 describe('RevealIfMatch', () => {
   let deployerAccount: PrivateKey,
